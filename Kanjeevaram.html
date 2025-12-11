@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanjeevaram Heritage Saree - Lakshvika (Parampara Collection)</title>
+    
+    <link rel="stylesheet" href="Global.css">
+    <link rel="stylesheet" href="Kanjeevaram.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="search-container">
+                    <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input type="text" placeholder="Search Parampara...">
+                </div>
+                <div class="logo-container">
+                    <a href="index.html" class="logo" data-logo-text="लक्षVIKA">लक्षVIKA</a>
+                    <p class="motto" data-motto-text="Creates Legacy">Creates Legacy</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="wishlist.html"><svg id="wishlist-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>Wishlist</span> (<span id="wishlist-count">0</span>)</a></li>
+                    <li><a href="profile.html"><svg id="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><span>Profile</span></a></li>
+                    <li><a href="cart.html"><svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg><span>Cart</span> (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-wrapper">
+        
+        <div class="wishlist-toggle-container" onclick="handleWishlistClick(this)">
+            <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
+
+        <div class="product-layout">
+            
+            <div class="product-gallery">
+                <div class="main-image" onmousemove="zoomImage(event)" onmouseleave="resetZoom(event)">
+                    <img id="currentImage" src="kanjeevaram_1.jpg" onerror="this.src='https://placehold.co/600x800/800000/FFF8DC?text=Kanjeevaram+Front+View'" alt="Kanjeevaram Saree Front">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="kanjeevaram_1.jpg" onclick="changeImage(this.src)" onerror="this.src='https://placehold.co/600x800/800000/FFF8DC?text=View+1'" alt="Thumbnail 1">
+                    <img src="kanjeevaram_2_pallu.jpg" onclick="changeImage(this.src)" onerror="this.src='https://placehold.co/600x800/800000/FFF8DC?text=View+2+Pallu'" alt="Thumbnail 2">
+                    <img src="kanjeevaram_3_detail.jpg" onclick="changeImage(this.src)" onerror="this.src='https://placehold.co/600x800/800000/FFF8DC?text=View+3+Detail'" alt="Thumbnail 3">
+                </div>
+            </div>
+
+            <div class="product-info">
+                
+                <h1 class="product-title">Kanjeevaram Heritage</h1>
+                <p class="product-oneliner">The Queen of Silks, woven with stories of temple architecture and tradition.</p>
+                <div class="price-tag">Price on Request</div>
+
+                <hr class="separator">
+
+                <div class="info-block">
+                    <h3>The Weave</h3>
+                    <p>Hailing from Kanchipuram, this saree is famed for its rich mulberry silk and contrasting borders, often featuring traditional motifs like the peacock, yali, and temple borders. The meticulous Zari work, often incorporating pure gold and silver threads, gives it a luxurious, heavy drape perfect for grand occasions.</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Styling Note</h3>
+                    <p><strong>Best paired with(Blouse):</strong> A short-sleeved, high-neck brocade blouse in a contrasting jewel tone (e.g., emerald green or ruby red) to complement the silk's luster. (Complementary with the saree)</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Complimentary Accessories</h3>
+                    <p>We offer a curated set of up to 3 accessories (e.g., Temple jewelry inspired hairpins, Stone bindis, Matching silk tassels) customized to this saree.</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="request-accessories">
+                        <span class="checkmark"></span>
+                        Send complimentary accessories on request only
+                    </label>
+                </div>
+
+                <div class="info-block">
+                    <h3>Crafting Timeline</h3>
+                    <p class="timeline-text">⏳ <strong>Lead Time:</strong> Approx 1 - 2 Months (order to delivery, as per the saree and customization and shipping location)</p>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="window.addToCart('kanjeevaram-001', 'Kanjeevaram Heritage Saree', 'kanjeevaram_1.jpg', 1)">
+                        Add to Cart
+                    </button>
+                    
+                    <button class="btn-secondary" onclick="window.location.href='enquiry.html'">
+                        Enquire Now
+                    </button>
+                    
+                    <button class="btn-tryon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        Virtual Try On
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="signature-green-box">
+            <div class="green-box-content">
+                <div class="box-logo">लक्षVIKA</div>
+                <p class="box-intro">
+                    Every order is delivered in our handcrafted **Luxurious Green Box**, embossed with the gold Lakshvika logo. Inside, you will find:
+                </p>
+                <ul class="box-list">
+                    <li>**The Masterpiece:** Your chosen saree, steam-ironed and wrapped in acid-free tissue.</li>
+                    <li>**Complimentary Blouse Piece:** Included as a standard offering with every saree.</li>
+                    <li>**Complimentary Accessories:** To complete your ensemble, we are happy to include a set of up to 3 curated accessories (e.g., tassels, hair accessories, or bindis) free of charge upon request.</li>
+                </ul>
+                <p class="box-note">
+                    *Note: We do not provide precious metals (Gold/Silver) or gemstones (Diamonds).*
+                </p>
+                <p class="box-scent">
+                    ✨We provide a pack of premium hand-rolled incense to greet you with a pleasant, divine aroma the moment you open the box.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="global.js"></script>
+    <script>
+        // 1. Image Changing Logic
+        function changeImage(src) {
+            document.getElementById('currentImage').src = src;
+        }
+
+        // 2. Zoom Logic (Copied from Tangail)
+        function zoomImage(e) {
+            const img = document.getElementById('currentImage');
+            const container = e.currentTarget;
+            
+            // Get mouse position relative to image
+            const x = e.clientX - container.getBoundingClientRect().left;
+            const y = e.clientY - container.getBoundingClientRect().top;
+            
+            // Set transformation origin based on mouse position
+            img.style.transformOrigin = `${x}px ${y}px`;
+            img.style.transform = "scale(1.8)"; // Zoom level
+        }
+
+        function resetZoom(e) {
+            const img = document.getElementById('currentImage');
+            img.style.transformOrigin = "center center";
+            img.style.transform = "scale(1)";
+        }
+
+        // 3. Wishlist Logic (Connecting to Global)
+        function handleWishlistClick(element) {
+            element.classList.toggle('active');
+            
+            // Call the global function defined in global.js
+            if (window.addToWishlist) {
+                // Using a placeholder price/ID for Kanjeevaram
+                window.addToWishlist('kanjeevaram-001', 'Kanjeevaram Heritage Saree', 15000, 'kanjeevaram_1.jpg');
+            } else {
+                console.error("Global script not loaded");
+            }
+        }
+    </script>
+</body>
+</html>

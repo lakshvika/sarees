@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parampara Collection - Lakshvika</title>
+    
+    <link rel="stylesheet" href="global.css">
+    
+    <link rel="stylesheet" href="parampara.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="search-container">
+                    <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input type="text" placeholder="Search Parampara...">
+                </div>
+                <div class="logo-container">
+                    <a href="index.html" class="logo" data-logo-text="लक्षVIKA">लक्षVIKA</a>
+                    <p class="motto" data-motto-text="Creates Legacy">Creates Legacy</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="wishlist.html"><svg id="wishlist-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>Wishlist</span> (<span id="wishlist-count">0</span>)</a></li>
+                    <li><a href="profile.html"><svg id="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><span>Profile</span></a></li>
+                    <li><a href="cart.html"><svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg><span>Cart</span> (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-page-container">
+        
+        <div class="collection-header">
+            <h1>The Parampara Collection</h1>
+            <p><strong>(Tradition):</strong> Bridal and ceremonial pieces, reserved for grand occasions.</p>
+        </div>
+
+        <div class="product-grid">
+            
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_1.html'">
+                <img src="parampara_1.jpg" onerror="this.src='https://placehold.co/400x600/800000/DAA520?text=Bridal+Banarasi'" alt="Bridal Banarasi">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Banarasi</h3>
+                    <p class="overlay-subtitle">(BRIDAL RED)</p>
+                    <p class="overlay-desc">The quintessential red wedding saree with heavy zari.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-001', 'Bridal Banarasi Red', 12999, 'parampara_1.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_2.html'">
+                <img src="parampara_2.jpg" onerror="this.src='https://placehold.co/400x600/C71585/FFF8DC?text=Patan+Patola'" alt="Patan Patola">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Patan Patola</h3>
+                    <p class="overlay-subtitle">(DOUBLE IKAT)</p>
+                    <p class="overlay-desc">A masterpiece of precision weaving, fit for royalty.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-002', 'Patan Patola Double Ikat', 25000, 'parampara_2.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_3.html'">
+                <img src="parampara_3.jpg" onerror="this.src='https://placehold.co/400x600/800080/DAA520?text=Royal+Paithani'" alt="Paithani">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Paithani</h3>
+                    <p class="overlay-subtitle">(PEACOCK MOTIF)</p>
+                    <p class="overlay-desc">Rich silk with signature oblique square borders.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-003', 'Royal Paithani Silk', 15499, 'parampara_3.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_4.html'">
+                <img src="parampara_4.jpg" onerror="this.src='https://placehold.co/400x600/FF4500/DAA520?text=Kanjeevaram+Gold'" alt="Kanjeevaram Bridal">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Kanjeevaram</h3>
+                    <p class="overlay-subtitle">(PURE GOLD ZARI)</p>
+                    <p class="overlay-desc">Heavy silk from Kanchipuram for the grand muhurtham.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-004', 'Kanjeevaram Gold Zari', 18999, 'parampara_4.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_5.html'">
+                <img src="parampara_5.jpg" onerror="this.src='https://placehold.co/400x600/000000/FFD700?text=Gadhwal+Silk'" alt="Gadhwal">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Gadhwal</h3>
+                    <p class="overlay-subtitle">(KUTTU BORDER)</p>
+                    <p class="overlay-desc">Distinctive interlocking weft technique from Telangana.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-005', 'Gadhwal Silk Saree', 9999, 'parampara_5.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="overlay-card" onclick="window.location.href='parampara_saree_6.html'">
+                <img src="parampara_6.jpg" onerror="this.src='https://placehold.co/400x600/FFFFFF/FF0000?text=Gujarati+Panetar'" alt="Panetar">
+                <div class="card-content-overlay">
+                    <h3 class="overlay-title">Panetar</h3>
+                    <p class="overlay-subtitle">(WHITE & RED)</p>
+                    <p class="overlay-desc">Traditional Gujarati bridal saree gifted by the maternal uncle.</p>
+                    <button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'par-006', 'Gujarati Panetar', 8500, 'parampara_6.jpg')">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+   
+    <script src="global.js"></script>
+    <script>
+        function addToCartFromCard(event, id, name, price, img) {
+            event.stopPropagation();
+            if (window.addToCart) {
+                window.addToCart(id, name, price, img, 1);
+            }
+        }
+    </script>
+</body>
+</html>

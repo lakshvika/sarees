@@ -1,0 +1,217 @@
+/* --- Cart Page Layout --- */
+
+/* Title color changed to Gold (accent-color) to be visible on the dark page background */
+.cart-page-container h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color); 
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* FIX: Added 'color: #333' to make text visible on the white background */
+.cart-items-list {
+    background: #fff;
+    color: #333; 
+    border-radius: 8px; /* Used fixed pixel if var not defined, or keep var(--border-radius) */
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-table th {
+    text-align: left;
+    padding: 1rem;
+    /* FIX: Changed from var(--text-color) to dark color */
+    color: #555; 
+    border-bottom: 2px solid #eee; /* Light gray for border */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+#cart-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    color: #333; /* Ensure table cell text is dark */
+}
+
+/* --- Cart Item Styling --- */
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-item-info img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info .item-details {
+    font-size: 0.95rem;
+}
+.cart-item-info .item-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.cart-quantity-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: #333; /* Dark text for input */
+}
+
+.btn-remove-item {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+.btn-remove-item:hover {
+    color: red;
+}
+
+/* --- Order Summary Box --- */
+/* FIX: Added 'color: #333' here too */
+.order-summary {
+    background: #fff;
+    color: #333; 
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky; 
+    top: 20px;
+}
+
+.order-summary h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+.summary-row span:last-child {
+    font-weight: 600;
+    color: #333; /* Ensure numbers are visible */
+}
+
+.order-summary hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
+}
+
+.total-row {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Make total stand out */
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* --- Empty Cart Message --- */
+#empty-cart-msg {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #fff;
+    border-radius: 8px;
+    /* FIX: This makes the "Your cart is currently empty" text visible */
+    color: #333; 
+}
+#empty-cart-msg p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-page-container h1 {
+        font-size: 2rem;
+    }
+
+    #cart-table {
+        font-size: 0.9rem;
+    }
+    
+    #cart-table th {
+        display: none; 
+    }
+
+    #cart-table tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid #eee;
+        border-radius: 8px;
+    }
+
+    #cart-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    #cart-table td:last-child {
+        border-bottom: none;
+    }
+
+    #cart-table td::before {
+        content: attr(data-label); 
+        font-weight: bold;
+        padding-right: 1rem;
+        color: #555; /* Label color for mobile */
+    }
+
+    .cart-item-info-cell {
+        display: block; 
+        padding: 1rem;
+    }
+    .cart-item-info-cell::before {
+        display: none; 
+    }
+    .cart-item-info img {
+        width: 60px;
+        height: 80px;
+    }
+}

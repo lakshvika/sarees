@@ -1,0 +1,295 @@
+/* =========================================
+   PAAR PRODUCT PAGE STYLES (chikankari.css)
+   (Copied from tangail.css to ensure visual consistency)
+========================================= */
+
+body {
+    background-color: #0d0d0d; /* Keep the dark luxury background */
+    color: #e0e0e0;
+}
+
+/* 1. LAYOUT & CONTAINER */
+.product-wrapper {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    position: relative;
+    min-height: 80vh;
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: start;
+}
+
+/* 2. GALLERY SECTION (Zoomable) */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 20px; /* Sticks while scrolling details */
+}
+
+.main-image {
+    width: 100%;
+    height: 600px;
+    border-radius: 4px;
+    overflow: hidden; /* Crucial for zoom */
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: crosshair; /* Indicates zoom capability */
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.1s ease-out; /* Smooth movement */
+    transform-origin: center center;
+}
+
+/* Thumbnail Styles */
+.thumbnail-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.thumbnail-list img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.7;
+}
+
+.thumbnail-list img:hover {
+    opacity: 1;
+    border-color: #DAA520;
+}
+
+/* 3. PRODUCT INFO SECTION (White Box Update) */
+.product-info {
+    background-color: #ffffff; /* White Background */
+    padding: 2.5rem; /* Spacious padding */
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2); /* Shadow for depth */
+    color: #333333; /* Dark text for readability */
+}
+
+.product-title {
+    font-family: serif; 
+    font-size: 2.5rem;
+    color: #800000; /* Maroon Title (Visible on White) */
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.product-oneliner {
+    font-style: italic;
+    color: #555; /* Dark Gray */
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    color: #DAA520; /* Gold Price */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 1.5rem 0;
+}
+
+.info-block {
+    margin-bottom: 2rem;
+}
+
+.info-block h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: #800000; /* Maroon Headers */
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.info-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444; /* Darker text */
+}
+
+/* Timeline Highlighting */
+.timeline-text {
+    background-color: #fff8e1; /* Light Gold/Cream bg */
+    padding: 10px;
+    border-left: 3px solid #DAA520;
+    display: block;
+    color: #555;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Checkbox Style (Updated for White Bg) */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+.checkbox-container input {
+    margin-right: 10px;
+    accent-color: #DAA520;
+    transform: scale(1.2);
+}
+
+/* 4. BUTTONS */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: #800000; /* Maroon Button */
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #5a0000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #800000;
+    color: #800000;
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.btn-secondary:hover {
+    background-color: #800000;
+    color: #fff;
+}
+
+.btn-tryon {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.btn-tryon:hover {
+    background-color: #000;
+}
+
+/* 5. WISHLIST TOGGLE */
+.wishlist-toggle-container {
+    position: absolute;
+    top: 20px;
+    left: 6%; /* Aligned with image */
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(255,255,255,0.8); /* Small white backing */
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.wishlist-toggle-container:hover {
+    transform: scale(1.1);
+}
+
+.heart-icon {
+    width: 24px;
+    height: 24px;
+    fill: none; 
+    stroke: #800000; /* Maroon Outline */
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Active State */
+.wishlist-toggle-container.active .heart-icon {
+    fill: #dc143c; /* Red Fill */
+    stroke: #dc143c;
+}
+
+/* 6. SIGNATURE GREEN BOX */
+.signature-green-box {
+    background: linear-gradient(145deg, #013220, #002114); 
+    border: 2px solid #DAA520; 
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    position: relative;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.green-box-content {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #F0EAD6;
+}
+
+.box-logo {
+    font-size: 2rem;
+    color: #DAA520;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.box-intro { font-size: 1.2rem; margin-bottom: 1.5rem; }
+.box-list { list-style: none; padding: 0; margin: 2rem 0; text-align: left; display: inline-block; }
+.box-list li { margin-bottom: 1rem; padding-left: 20px; border-left: 2px solid #DAA520; }
+.box-scent { margin-top: 1.5rem; font-weight: bold; color: #FFD700; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .product-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .main-image { height: 450px; }
+}

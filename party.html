@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Party Collection - Lakshvika</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="party.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="search-container"><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><input type="text" placeholder="Search Party..."></div>
+                <div class="logo-container"><a href="index.html" class="logo">लक्षVIKA</a><p class="motto">Creates Legacy</p></div>
+                <ul class="nav-links">
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-page-container">
+        <div class="collection-header">
+            <h1>The Party Edit</h1>
+            <p>Glamorous drapes, shimmering textures, and modern silhouettes.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_1.html'">
+                <img src="avilasha_1.jpg" onerror="this.src='https://placehold.co/400x600/008080/FFF8DC?text=Geometric+Satin'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Geometric Satin</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-001', 'Geometric Satin', 2999, 'avilasha_1.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_2.html'">
+                <img src="avilasha_2.jpg" onerror="this.src='https://placehold.co/400x600/4B0082/00FFFF?text=Abstract+Crepe'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Abstract Crepe</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-002', 'Abstract Crepe', 3499, 'avilasha_2.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_4.html'">
+                <img src="avilasha_4.jpg" onerror="this.src='https://placehold.co/400x600/B8860B/FFFFFF?text=Metallic+Sheen'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Metallic Sheen</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-004', 'Metallic Tissue', 4599, 'avilasha_4.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_5.html'">
+                <img src="avilasha_5.jpg" onerror="this.src='https://placehold.co/400x600/FF1493/FFFFFF?text=Neon+Fusion'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Neon Fusion</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-005', 'Neon Georgette', 3199, 'avilasha_5.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='aanchal_saree_1.html'">
+                <img src="aanchal_1.jpg" onerror="this.src='https://placehold.co/400x600/FFC0CB/800000?text=Chikankari'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Chikankari</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'aan-001', 'Chikankari', 3599, 'aanchal_1.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='aanchal_saree_2.html'">
+                <img src="aanchal_2.jpg" onerror="this.src='https://placehold.co/400x600/40E0D0/000000?text=Pure+Chiffon'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Pure Chiffon</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'aan-002', 'Pure Chiffon', 2499, 'aanchal_2.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='aanchal_saree_4.html'">
+                <img src="aanchal_4.jpg" onerror="this.src='https://placehold.co/400x600/FFFFFF/000000?text=Sheer+Organza'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Sheer Organza</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'aan-004', 'Hand Painted Organza', 3299, 'aanchal_4.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='aanchal_saree_3.html'">
+                <img src="aanchal_3.jpg" onerror="this.src='https://placehold.co/400x600/800080/FFF8DC?text=Mysore+Crepe'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Mysore Crepe</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'aan-003', 'Mysore Crepe', 5999, 'aanchal_3.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='aanchal_saree_6.html'">
+                <img src="aanchal_6.jpg" onerror="this.src='https://placehold.co/400x600/C0C0C0/000000?text=Soft+Silk'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Soft Silk</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'aan-006', 'Soft Silk', 4199, 'aanchal_6.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='prakriti_saree_3.html'">
+                <img src="prakriti_3.jpg" onerror="this.src='https://placehold.co/400x600/FFB6C1/000000?text=Floral+Bloom'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Floral Bloom</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'prak-003', 'Floral Georgette', 2199, 'prakriti_3.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='anubhav_saree_6.html'">
+                <img src="anubhav_6.jpg" onerror="this.src='https://placehold.co/400x600/1a1a1a/FFF8DC?text=Black+Jamdani'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Black Jamdani</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'anu-006', 'Midnight Jamdani', 6799, 'anubhav_6.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_3.html'">
+                <img src="avilasha_3.jpg" onerror="this.src='https://placehold.co/400x600/C0C0C0/000000?text=Digital+Linen'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Digital Linen</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-003', 'Digital Linen', 2799, 'avilasha_3.jpg')">Add to Cart</button></div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="global.js"></script>
+    <script>function addToCartFromCard(e,id,n,p,i){e.stopPropagation();if(window.addToCart)window.addToCart(id,n,p,i,1);}</script>
+</body>
+</html>

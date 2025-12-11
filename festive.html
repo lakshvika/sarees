@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Festive Collection - Lakshvika</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="festive.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="search-container"><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><input type="text" placeholder="Search Festive..."></div>
+                <div class="logo-container"><a href="index.html" class="logo">लक्षVIKA</a><p class="motto">Creates Legacy</p></div>
+                <ul class="nav-links">
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-page-container">
+        <div class="collection-header">
+            <h1>The Festive Edit</h1>
+            <p>Authentic regional weaves and comfortable cottons for every celebration.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="overlay-card" onclick="window.location.href='paar_saree_1.html'">
+                <img src="paar_1.jpg" onerror="this.src='https://placehold.co/400x600/b87333/FFF8DC?text=Tangail'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Tangail</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'paar-001', 'Tangail', 2899, 'paar_1.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='paar_saree_2.html'">
+                <img src="paar_2.jpg" onerror="this.src='https://placehold.co/400x600/ffffff/800000?text=Dhaniakhali'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Dhaniakhali</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'paar-002', 'Dhaniakhali', 1999, 'paar_2.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='paar_saree_3.html'">
+                <img src="paar_3.jpg" onerror="this.src='https://placehold.co/400x600/000000/FF4500?text=Begampuri'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Begampuri</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'paar-003', 'Begampuri', 2499, 'paar_3.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='paar_saree_4.html'">
+                <img src="paar_4.jpg" onerror="this.src='https://placehold.co/400x600/800080/FFA500?text=Sambalpuri'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Sambalpuri</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'paar-004', 'Sambalpuri', 5499, 'paar_4.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='paar_saree_6.html'">
+                <img src="paar_6.jpg" onerror="this.src='https://placehold.co/400x600/F0E68C/228B22?text=Shantipuri'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Shantipuri</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'paar-006', 'Shantipuri', 2299, 'paar_6.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='prakriti_saree_1.html'">
+                <img src="prakriti_1.jpg" onerror="this.src='https://placehold.co/400x600/556B2F/FFF8DC?text=Organic+Cotton'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Organic Cotton</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'prak-001', 'Organic Cotton', 1899, 'prakriti_1.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='prakriti_saree_2.html'">
+                <img src="prakriti_2.jpg" onerror="this.src='https://placehold.co/400x600/8B4513/FFF8DC?text=Pure+Linen'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Pure Linen</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'prak-002', 'Pure Linen', 3499, 'prakriti_2.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='prakriti_saree_4.html'">
+                <img src="prakriti_4.jpg" onerror="this.src='https://placehold.co/400x600/4B0082/FFF8DC?text=Indigo+Block'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Indigo Dabu</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'prak-004', 'Indigo Dabu', 2599, 'prakriti_4.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='prakriti_saree_5.html'">
+                <img src="prakriti_5.jpg" onerror="this.src='https://placehold.co/400x600/A0522D/FFF8DC?text=Khadi+Spun'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Khadi Spun</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'prak-005', 'Khadi Spun', 1599, 'prakriti_5.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='anubhav_saree_4.html'">
+                <img src="anubhav_4.jpg" onerror="this.src='https://placehold.co/400x600/006400/FFF8DC?text=Green+Tant'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Emerald Tant</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'anu-004', 'Emerald Tant', 2199, 'anubhav_4.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='anubhav_saree_5.html'">
+                <img src="anubhav_5.jpg" onerror="this.src='https://placehold.co/400x600/8B0000/FFF8DC?text=Murshidabad'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Murshidabad</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'anu-005', 'Murshidabad Silk', 4299, 'anubhav_5.jpg')">Add to Cart</button></div>
+            </div>
+            <div class="overlay-card" onclick="window.location.href='avilasha_saree_6.html'">
+                <img src="avilasha_6.jpg" onerror="this.src='https://placehold.co/400x600/2F4F4F/FFFFFF?text=Modern+Stripes'">
+                <div class="card-content-overlay"><h3 class="overlay-title">Urban Stripes</h3><button class="btn-overlay-cart" onclick="addToCartFromCard(event, 'avi-006', 'Urban Stripes', 2299, 'avilasha_6.jpg')">Add to Cart</button></div>
+            </div>
+        </div>
+    </main>
+
+  
+    <script src="global.js"></script>
+    <script>function addToCartFromCard(e,id,n,p,i){e.stopPropagation();if(window.addToCart)window.addToCart(id,n,p,i,1);}</script>
+</body>
+</html>

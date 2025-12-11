@@ -1,0 +1,203 @@
+/* === PROFILE PAGE STYLES (Luxury Dark Gold Theme) === */
+
+.profile-container {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 60vh;
+}
+
+.profile-card {
+    /* CHANGED: Dark background to make Gold text pop */
+    background: rgba(30, 10, 10, 0.95); 
+    width: 100%;
+    max-width: 500px; 
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    /* Gold Border */
+    border: 1px solid var(--accent-color); 
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.3); /* Faint gold line */
+}
+
+/* SHINY GOLD HEADINGS */
+.profile-header h1 {
+    font-size: 1.8rem;
+    color: #FFD700; /* Shiny Gold */
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Shadow makes it pop */
+    letter-spacing: 1px;
+}
+
+.profile-header p {
+    color: #FFF8DC; /* Cream color for subtitles */
+    font-size: 0.95rem;
+}
+
+/* --- Avatar (Initials Circle) --- */
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: #FFD700; /* Gold Text */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid #FFD700; /* Gold Border */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* Gold Glow */
+}
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* GOLD LABELS */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #FFD700; /* Shiny Gold */
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs adapted for Dark Background */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    /* Semi-transparent white bg */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(218, 165, 32, 0.5); /* Dim Gold Border */
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #fff; /* White text inside input */
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700; /* Bright Gold on focus */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color); /* Maroon text on Gold button */
+    font-weight: bold;
+}
+.btn-full:hover {
+    background-color: #FFD700; /* Brighter gold hover */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* --- Register Link Box --- */
+.register-link-box {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #fff;
+}
+.register-link-box a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+.register-link-box a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+/* --- Profile Details View --- */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.05); /* Subtle glass block */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item.full-width {
+    grid-column: span 2;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-color); /* Gold Label */
+    margin-bottom: 0.3rem;
+    opacity: 0.8;
+}
+
+.detail-item p {
+    font-weight: 500;
+    color: #fff; /* White Value for readability */
+    margin: 0;
+    word-break: break-word;
+    font-size: 1.1rem;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-actions .btn {
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+}
+.btn-secondary:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .detail-item.full-width {
+        grid-column: span 1;
+    }
+}

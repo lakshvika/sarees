@@ -1,0 +1,408 @@
+/* =========================================
+    GLOBAL STYLES (global.css)
+    Use this file on EVERY page.
+=========================================
+*/
+
+/* === IMPORT GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* === 1. CSS VARIABLES === */
+:root {
+    /* Colors - DARK THEME ADAPTED */
+    --primary-color: #800000; /* Maroon */
+    --accent-color: goldenrod;
+    
+    /* Dark fallback matching the Home.jpg */
+    --bg-color: #2a0a0a;      
+    
+    /* Text color for readability on dark background */
+    --text-color: #FFF8DC;    
+    
+    --header-text: goldenrod; 
+    
+    /* Semi-transparent dark footer background */
+    --light-gray: rgba(30, 10, 10, 0.9); 
+    
+    --white: #ffffff;
+    
+    /* Subtler border color for dark theme */
+    --border-color: rgba(255, 248, 220, 0.2); 
+
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif; 
+    --font-body: 'Lora', serif;                
+}
+
+/* === 2. GLOBAL RESET & BODY STYLES === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* === BACKGROUND IMAGE SETUP === */
+    background-color: var(--bg-color); 
+    
+    /* This sets Home.jpg as the universal background */
+    background-image: url('Home.png'); 
+    
+    background-size: cover;            
+    background-position: center;       
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    
+    color: var(--text-color);
+    margin: 0; 
+    font-family: var(--font-body); 
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent-color); 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading); 
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: var(--accent-color); 
+    letter-spacing: 0.5px; 
+}
+
+/* === 3. CORE LAYOUT & COMPONENTS === */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-heading); 
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+.btn-primary:hover {
+    background-color: #600000; 
+    text-decoration: none;
+}
+
+.price {
+    font-family: var(--font-body);
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+
+/* === 4. HEADER / NAVBAR === */
+.navbar {
+    background-color: #1F3626; 
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;
+    width: 90%; 
+}
+
+.search-container {
+    position: relative;
+}
+.search-container input {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px 10px 10px 40px; 
+    width: 80%;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-color); 
+}
+.search-container input::placeholder {
+    color: rgba(255, 248, 220, 0.6);
+}
+
+.search-container svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--accent-color); 
+    width: 20px;
+    height: 20px;
+}
+
+.logo-container {
+    text-align: center;
+}
+.logo {
+    font-family: var(--font-heading); 
+    color: var(--accent-color) !important; 
+    text-decoration: none;
+    font-size: 2.8rem; 
+    font-weight: 700;
+    display: block; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+.motto {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin: -5px 0 0 0; 
+    font-family: var(--font-body); 
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin-left: 1.5rem; 
+}
+.nav-links li a {
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+    color: var(--header-text); 
+    text-decoration: none;
+    font-family: var(--font-body); 
+    font-weight: 500;
+}
+.nav-links li a span {
+    color: inherit; 
+    font-size: 0.9rem;
+}
+
+.nav-links svg {
+    fill: var(--header-text); 
+    width: 24px;   
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+#search-icon,
+#wishlist-icon,
+#profile-icon,
+#cart-icon {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#cart-count {
+    transition: all 0.2s ease-in-out;
+    font-family: sans-serif; 
+}
+
+.icon-toggled-svg {
+    fill: var(--accent-color) !important; 
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 5px goldenrod);
+}
+
+.icon-toggled-text {
+    color: var(--accent-color) !important; 
+    transform: scale(1.15);
+    display: inline-block; 
+}
+
+
+/* === 5. FOOTER === */
+footer {
+    background-color: var(--light-gray); 
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    font-family: var(--font-body);
+    backdrop-filter: blur(5px); 
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-column {
+    flex: 1; 
+    min-width: 220px; 
+    margin: 1rem;
+}
+.footer-column h4 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-color); 
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: var(--primary-color); 
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-column ul li {
+    margin-bottom: 0.75rem;
+}
+
+/* === UPDATE: Phone number fix === */
+.footer-column p,
+.footer-column ul li a,
+.footer-column a {
+    text-decoration: none;
+    color: #ffffff !important; /* Force Plain White for all footer text */
+    font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent-color) !important; 
+}
+
+.footer-column .logo {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--accent-color) !important; 
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    background-color: rgba(255,255,255,0.1);
+    color: var(--text-color);
+    border-radius: 4px 0 0 4px;
+    font-family: var(--font-body);
+}
+.newsletter-form button {
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: var(--primary-color); 
+    color: var(--accent-color);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+.payment-icons img {
+    height: 30px;
+    margin-right: 10px;
+    background-color: rgba(255,255,255,0.8); 
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.footer-payment-section {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem auto 0 auto;
+    max-width: 1200px;
+}
+
+.footer-payment-section h4 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+
+/* === 6. CHATBOT TOGGLER === */
+.chatbot-toggler {
+    background-color: var(--primary-color);
+    padding: 0.9rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border: 2px solid var(--accent-color);
+}
+.chatbot-toggler:hover {
+    transform: scale(1.1);
+}
+.chatbot-toggler svg {
+    fill: var(--accent-color);
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+
+/* === 7. NOTIFICATION POPUP === */
+.cart-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 2000;
+    font-weight: bold;
+    font-family: var(--font-body);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid var(--accent-color);
+}
